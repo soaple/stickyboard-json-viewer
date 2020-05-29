@@ -5,7 +5,19 @@ import PropTypes from 'prop-types';
 import ReactJson from 'react-json-view';
 import styled from 'styled-components';
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+    height: 100%;
+    padding: 8px;
+    overflow: scroll;
+`;
+
+const Loading = styled.div`
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+`;
 
 class JsonViewer extends React.Component {
     constructor(props) {
@@ -18,7 +30,7 @@ class JsonViewer extends React.Component {
         const { jsonObject } = this.props;
 
         if (!jsonObject) {
-            return <div>JSON object is invalid!</div>;
+            return <Loading>Loading...</Loading>;
         }
 
         return (
