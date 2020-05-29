@@ -1,5 +1,5 @@
 # stickyboard-json-viewer
-Component base for StickyBoard
+JSON viewer for StickyBoard
 
 # Webpack watch
 ```bsh
